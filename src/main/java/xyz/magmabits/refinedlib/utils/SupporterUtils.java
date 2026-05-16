@@ -112,11 +112,11 @@ public class SupporterUtils {
     }
 
     public static boolean isCurator(UUID uuid) {
-        return isSupporterOfType(uuid, "curators");
+        return isSupporterOfType(uuid, "curator");
     }
 
     public static boolean isModerator(UUID uuid) {
-        return isSupporterOfType(uuid, "moderators");
+        return isSupporterOfType(uuid, "moderator");
     }
 
     public static boolean isMember(UUID uuid) {
