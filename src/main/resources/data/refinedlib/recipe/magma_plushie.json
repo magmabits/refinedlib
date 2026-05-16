@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:gray_wool"
+    },
+    "M": {
+      "item": "minecraft:magma_block"
+    },
+    "B": {
+      "item": "minecraft:black_wool"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GMG",
+    "BGB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "refinedlib:magma_plushie"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:spruce_sapling"
+    },
+    "P": {
+      "item": "minecraft:potato"
+    }
+  },
+  "pattern": [
+    " S ",
+    "PPP",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "refinedlib:ryn_plushie"
+  }
+}

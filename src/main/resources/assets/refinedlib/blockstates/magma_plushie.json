@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "refinedlib:block/magma_plushie",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "refinedlib:block/magma_plushie"
+    },
+    "facing=south": {
+      "model": "refinedlib:block/magma_plushie",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "refinedlib:block/magma_plushie",
+      "y": 270
+    }
+  }
+}

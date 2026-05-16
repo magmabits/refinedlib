@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "minecraft:purple_dye"
+    },
+    "F": {
+      "item": "minecraft:fire_charge"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PFP",
+    " P "
+  ],
+  "result": {
+    "count": 1,
+    "id": "refinedlib:mickeynna_plushie"
+  }
+}
