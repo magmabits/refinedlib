@@ -14,6 +14,14 @@ public abstract class PlayerNametagMixin<T extends Entity> {
     @ModifyVariable(method = "renderLabelIfPresent", at = @At("HEAD"), argsOnly = true, index = 2)
     public Text refinedLib$applyNametag(Text text, T entity) {
         if (text == null || !(entity instanceof PlayerEntity player)) return text;
-        return SupporterUtils.getSupporterStylisedName(player.getUuid(), text);
+        String type = SupporterUtils.getSupporterType(player.getUuid());
+        if (type == null) return text;
+        int color = switch (type) {
+            case "curator"  -> 0x8bcc7f;
+            case "moderator" -> 0xcc7f7f;
+            case "membership" -> 0x7f81cc;
+            default -> 0xcc7fc7;
+        };
+        return SupporterUtils.getSupporterStylisedName(player.getUuid(), text, color);
     }
 }

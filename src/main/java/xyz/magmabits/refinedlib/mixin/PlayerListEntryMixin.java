@@ -12,6 +12,15 @@ import xyz.magmabits.refinedlib.utils.SupporterUtils;
 public abstract class PlayerListEntryMixin {
     @ModifyReturnValue(method = "applyGameModeFormatting", at = @At("RETURN"))
     public Text refinedLib$applySupporterFormattingToName(Text original, PlayerListEntry entry) {
-        return SupporterUtils.getSupporterStylisedName(entry.getProfile().getId(), original);
+        if (original == null) return null;
+        String type = SupporterUtils.getSupporterType(entry.getProfile().getId());
+        if (type == null) return original;
+        int color = switch (type) {
+            case "curator"  -> 0x8bcc7f;
+            case "moderator" -> 0xcc7f7f;
+            case "membership" -> 0x7f81cc;
+            default -> 0xcc7fc7;
+        };
+        return SupporterUtils.getSupporterStylisedName(entry.getProfile().getId(), original, color);
     }
 }

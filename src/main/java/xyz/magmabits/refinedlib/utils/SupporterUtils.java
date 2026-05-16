@@ -123,18 +123,27 @@ public class SupporterUtils {
         return isSupporterOfType(uuid, "membership");
     }
 
-    public static Text getSupporterStylisedName(UUID playerUuid, Text text) {
+    public static Text getSupporterStylisedName(UUID playerUuid, Text text, int color) {
         if (text == null) return null;
         if (isSupporter(playerUuid)) {
             MutableText result = Text.empty();
             result.append(Text.literal("\uE780")
                     .styled(style -> style
-                            .withColor(0x8bcc7f)
+                            .withColor(color)
                             .withFont(Identifier.of("refinedlib", "default"))));
-            result.append(Text.literal(" ")); // plain space in default font
+            result.append(Text.literal(" "));
             result.append(text.copy());
             return result;
         }
         return text;
+    }
+
+    public static String getSupporterType(UUID uuid) {
+        String normalized = normalize(uuid);
+        return fetchPlayers().stream()
+                .filter(p -> p.uuid().equals(normalized))
+                .map(PlayerInfo::type)
+                .findFirst()
+                .orElse(null);
     }
 }
