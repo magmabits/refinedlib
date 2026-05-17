@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:prismarine_crystals"
+    },
+    "S": {
+      "item": "minecraft:slime_block"
+    },
+    "P": {
+      "item": "minecraft:prismarine_shard"
+    }
+  },
+  "pattern": [
+    " C ",
+    "PSP",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "refinedlib:slime_plushie"
+  }
+}

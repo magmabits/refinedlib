@@ -5,6 +5,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.math.MathHelper;
 
 public class TextUtils {
+    // Usage: applyTextGradient(Text.translatable(this.getTranslationKey()).getString(), 0xFFFFFF, 0x000000);
     public static MutableText applyTextGradient(String name, int start, int end) {
         MutableText text = Text.empty();
         int len = name.length();
